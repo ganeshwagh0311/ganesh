@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drishak Agency - Digital Marketing & Creative Solutions</title>
+    <meta name="keywords" content="
+Vishal Wagh,
+Vishal Wagh Rahuri,
+Vishal Wagh Graphic Designer,
+Vishal Wagh Drishak Agency,
+Founder of Drishak Agency,
+Vishal Wagh Ahilyanagar,
+Vishal Wagh Ahmednagar,
+Brand Strategist Vishal Wagh,
+
+Digital Marketing Agency in Rahuri,
+Best Logo Designer in Rahuri,
+Branding Agency Rahuri,
+Social Media Marketing Rahuri,
+Drishak Agency Rahuri,
+Rahuri Digital Marketing Services,
+Website Development in Rahuri,
+Advertising Agency Rahuri,
+
+Digital Marketing Agency in Ahilyanagar,
+Branding Agency Ahmednagar,
+Best Logo Design Ahilyanagar,
+Social Media Management Ahmednagar,
+Digital Marketing Company in Ahilyanagar,
+SEO Services Ahmednagar,
+Top Creative Agency Ahilyanagar,
+Graphic Design Studio Ahmednagar,
+
+Professional Logo Creation,
+Brand Identity Design,
+Video Editing and Reels Creation,
+Social Media Content Planning,
+Performance Marketing Maharashtra,
+Digital Branding Studio,
+Business Logo Reveal and Intros,
+Complete Social Media Management,
+
+Dairy Branding Specialist,
+Construction Marketing Agency,
+Milk Packaging Design Services,
+Real Estate Branding Ahilyanagar,
+Cafe and Restaurant Marketing,
+B2B Marketing for Dairy Products,
+Corporate Identity Design Maharashtra
+">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5rem 1.5rem; /* <-- reduce bottom padding */
+    z-index: 1;
+     /* padding-top: 5rem;
+    padding-bottom: 0; */
+    }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        /* Custom scrollbar for a modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a00e0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8e2de2;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper">
+
+        <!-- Header -->
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full p-4 md:p-6 z-50 transition-all duration-300">
+  <nav class="container mx-auto flex justify-between items-center">
+    <a href="#home" class="flex items-center">
+      <img src="./img/DRISHAK LOGO.png" alt="Drishak Logo" class="h-6 md:h-8 w-auto object-contain" />
+    </a>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobileMenuBtn" class="text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Menu Links -->
+    <div id="menuLinks" 
+         class="hidden md:flex md:flex-row md:space-x-8 font-medium 
+                absolute md:static top-full left-0 w-full md:w-auto 
+                bg-gray-900 md:bg-transparent text-center md:text-left 
+                space-y-4 md:space-y-0 py-4 md:py-0">
+      <a href="#services" class="block hover:text-purple-400 transition-colors">Services</a>
+      <a href="#work" class="block hover:text-purple-400 transition-colors">Work</a>
+      <a href="https://www.instagram.com/drishakagency?igsh=MW5meWJ0ZzNyZ3My" target="_blank" rel="noopener noreferrer" class="block hover:text-purple-400 transition-colors">Instagram</a>
+      <a href="#contact" class="block hover:text-purple-400 transition-colors">Contact</a>
+      <a href="#contact" class="block bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all">
+        Start Project
+      </a>
+    </div>
+  </nav>
+</header>
+        <!-- Hero Section -->
+   <section id="hero" class="section text-center px-4 sm:px-6 md:px-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 tracking-tight leading-snug animate-fade-in-down">
+      We Build Digital Experiences
+    </h1>
+    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+      Drishak Agency is your partner in crafting stunning visuals, intuitive interfaces, and powerful marketing campaigns that drive results.
+    </p>
+    <div class="flex flex-wrap justify-center items-center gap-4">
+      <a href="#work" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg md:text-lg hover:scale-105 transition-transform text-center">
+        View Our Work
+      </a>
+      <a href="https://www.behance.net/vishalwagh21" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg md:text-lg hover:scale-105 transition-transform text-center">
+        Portfolio
+      </a>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Services Section -->
+<section id="services" class="section bg-black bg-opacity-20 px-4 sm:px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-black mb-2">Our Expertise</h2>
+    <p class="text-base sm:text-lg text-gray-400 mb-12">From concept to launch, we've got you covered.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                        <div class="mb-4 text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Graphics & Illustration</h3>
+                        <p class="text-gray-400">Creating memorable brand identities, logos, and custom illustrations that tell your story.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                         <div class="mb-4 text-purple-400">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">UI/UX Design</h3>
+                        <p class="text-gray-400">Designing intuitive, user-centric interfaces for websites and applications that are both beautiful and functional.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                        <div class="mb-4 text-purple-400">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Video Production</h3>
+                        <p class="text-gray-400">Producing high-quality promotional videos, animations, and motion graphics that capture attention.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                        <div class="mb-4 text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Ad Campaigns</h3>
+                        <p class="text-gray-400">Running targeted ad campaigns across social media and search engines to maximize your reach and ROI.</p>
+                    </div>
+                     <!-- Service Card 5 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                        <div class="mb-4 text-purple-400">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+                        <p class="text-gray-400">Building fast, responsive, and visually stunning websites that form the core of your digital presence.</p>
+                    </div>
+                    <!-- Service Card 6 -->
+                    <div class="glass-card p-8 rounded-2xl text-left">
+                       <div class="mb-4 text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">SEO & Analytics</h3>
+                        <p class="text-gray-400">Optimizing your online presence to rank higher in search results and tracking performance with in-depth analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+      <section id="work" class="section px-4 sm:px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-black mb-8 sm:mb-12">Selected Works</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+      
+      <!-- Project Card 1 -->
+      <div onclick="window.open('/img/vishra p logo G pdf.pdf', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer">
+        <img src="./img/trehywfsgn.jpg" alt="Project One" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">Brand Identity</h3>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div onclick="window.open('/img/page 1.pdf', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer">
+        <img src="./img/asdsdf.jpg" alt="Project Two" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">UI/UX Redesign</h3>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div onclick="window.open('https://www.instagram.com/reel/DOIYZJ2DHLE/?igsh=MXJvOThzeXFrcnl4Mg==', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer w-full h-80">
+        <img src="./img/v.jpg" alt="Project Three" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">Ad Campaign Video</h3>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div onclick="window.open('/img/ui_design.png', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer">
+        <img src="./img/t.jpg" alt="Project Four" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">Mobile App Design</h3>
+        </div>
+      </div>
+
+      <!-- Project Card 5 -->
+      <div onclick="window.open('https://info-teach-shop.onrender.com/', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer">
+        <img src="./img/e.jpg" alt="Project Five" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">E-commerce Website</h3>
+        </div>
+      </div>
+
+      <!-- Project Card 6 -->
+      <div onclick="window.open('/img/sm 3.pdf', '_blank')" 
+           class="group relative overflow-hidden rounded-xl cursor-pointer">
+        <img src="./img/s.jpg" alt="Project Six" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-2xl font-bold">Social Media Graphics</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="section bg-black bg-opacity-20 px-4 sm:px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-black mb-4">Let's Create Together</h2>
+    <p class="text-base sm:text-lg text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto">Have a project in mind? We'd love to hear about it. Drop us a line and we'll get back to you soon.</p>
+    
+    <form id="whatsappForm" class="max-w-xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+        <input type="text" id="name" placeholder="Your Name" class="bg-gray-800 border border-gray-700 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all w-full">
+        <input type="email" id="email" placeholder="Your Email" class="bg-gray-800 border border-gray-700 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all w-full">
+      </div>
+      <textarea id="message" placeholder="Tell us about your project..." rows="4 sm:rows-6" class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 mb-4 sm:mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"></textarea>
+      <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg text-lg hover:scale-105 transition-transform w-full sm:w-auto">Send Message</button>
+    </form>
+
+    <!-- Direct Contact Info -->
+    <div class="mt-12 text-center text-gray-700">
+      <p class="text-xl font-semibold mb-3">Direct Contact:</p>
+      <p class="text-lg mb-2">
+        <strong class="text-blue-600">Email:</strong> 
+        <a href="mailto:vwagh0481@gmail.com" class="text-blue-600 hover:underline">drishakagency@gmail.com</a>
+      </p>
+      <p class="text-lg mb-4">
+        <strong class="text-blue-600">Phone:</strong> 
+        <a href="tel:+918459656685" class="text-blue-600 hover:underline">8459656685, 9209266685</a>
+      </p>
+
+      <!-- Instagram Links -->
+      <div class="mt-6">
+        <p class="text-xl font-semibold mb-3">Follow Us on Instagram:</p>
+        <a href="https://www.instagram.com/drishakagency/" target="_blank" class="text-pink-500 hover:text-pink-400 mx-2 text-lg sm:text-xl">Drishak Agency</a>
+        <!-- <a href="https://www.instagram.com/yourpersonalpage/" target="_blank" class="text-pink-500 hover:text-pink-400 mx-2 text-lg sm:text-xl">Personal Page</a> -->
+      </div>
+    </div>
+  </div>
+  <section style="display:none">
+
+<h2>Digital Marketing Services in Rahuri and Ahilyanagar</h2>
+
+<p>
+Drishak Agency founded by Vishal Wagh provides digital marketing services in Rahuri, Ahilyanagar and Ahmednagar. 
+We specialize in logo design, brand identity design, social media marketing, website development and SEO services.
+
+Vishal Wagh is a graphic designer and brand strategist based in Rahuri who helps businesses grow through 
+digital branding, creative marketing strategies and performance marketing campaigns.
+
+Our services include professional logo creation, social media content planning, video editing, reels creation, 
+brand identity design, dairy branding, construction marketing, real estate branding and corporate identity design in Maharashtra.
+</p>
+
+</section>
+     <!-- Footer -->
+      <p class="text-gray-500 text-sm mt-2">
+Founder: Vishal Wagh | Digital Marketing & Branding Expert in Rahuri, Ahilyanagar
+</p>
+        <footer class="py-8 text-center text-gray-500">
+            <p>&copy; 2025 Drishak Agency. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+</section>
+
+
+
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let phoneNumber = "918459656685"; // 📌 Your WhatsApp number with country code (India = 91)
+    let text = `Hello, my name is ${name}. My email is ${email}. Message: ${message}`;
+
+    let url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
+
+        <!-- Footer -->
+        <!-- <footer class="py-8 text-center text-gray-500">
+            <p>&copy; 2025 Drishak Agency. All Rights Reserved.</p>
+        </footer>
+
+    </div> -->
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const menuLinks = document.getElementById('menuLinks');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    menuLinks.classList.toggle('hidden');
+  });
+        // Three.js Scene Setup
+        let scene, camera, renderer, particles, mainObject;
+        const canvas = document.getElementById('bg-canvas');
+
+        function init() {
+            // Scene
+            scene = new THREE.Scene();
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+
+            // Main 3D Object
+            const geometry = new THREE.IcosahedronGeometry(1.2, 1);
+            const material = new THREE.MeshStandardMaterial({
+                color: 0x8e2de2,
+                metalness: 0.6,
+                roughness: 0.3,
+                wireframe: true,
+            });
+            mainObject = new THREE.Mesh(geometry, material);
+            scene.add(mainObject);
+
+            // Lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+            scene.add(ambientLight);
+            const pointLight = new THREE.PointLight(0xffffff, 1.5);
+            pointLight.position.set(5, 5, 5);
+            scene.add(pointLight);
+
+            // Particles
+            const particlesGeometry = new THREE.BufferGeometry;
+            const count = 5000;
+            const positions = new Float32Array(count * 3);
+            for (let i = 0; i < count * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 20;
+            }
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.015,
+                sizeAttenuation: true,
+                color: 0x888888
+            });
+            particles = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particles);
+
+            // Handle Window Resize
+            window.addEventListener('resize', onWindowResize, false);
+            
+            // Handle Mouse Move
+            document.addEventListener('mousemove', onMouseMove, false);
+
+            // Handle Scroll
+            window.addEventListener('scroll', onScroll, false);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        }
+
+        let mouseX = 0;
+        let mouseY = 0;
+        function onMouseMove(event) {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        function onScroll() {
+            const t = document.body.getBoundingClientRect().top;
+            mainObject.rotation.y += 0.01;
+            mainObject.rotation.x += 0.01;
+            camera.position.z = 5 + t * 0.002;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Main object animation
+            mainObject.rotation.x += 0.001;
+            mainObject.rotation.y += 0.001;
+
+            // Particles animation
+            particles.rotation.y += 0.0002;
+
+            // Mouse interaction
+            const targetX = mouseX * 0.1;
+            const targetY = mouseY * 0.1;
+            mainObject.rotation.y += (targetX - mainObject.rotation.y) * 0.05;
+            mainObject.rotation.x += (targetY - mainObject.rotation.x) * 0.05;
+
+
+            renderer.render(scene, camera);
+        }
+
+        init();
+        animate();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
